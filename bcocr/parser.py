@@ -133,7 +133,8 @@ class BusinessCardParser(object):
         Args:
             input (str): the Business Card OCR string to be parsed
 
-        return contact_info (ContactInfo): the ContactInfo extracted
+        Return:
+            bool: True if the line contains any stopword, else False
         """
         return any(word in self.stopwords for word in candidate_line.split(' '))
 
