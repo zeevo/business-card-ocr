@@ -97,6 +97,8 @@ class BusinessCardParser(object):
             logging.debug('Found Email [{0}] from candidate line [{1}]'.format(email.group(1), email.string))
             contact_info.email_address = email.string
             candidates.remove(email.string)
+
+            # we can split out email on '@' to make better decisions on what is a name and what is a company
             split = email.string.split('@')
             left_half = split[0]
             right_half = split[1]
