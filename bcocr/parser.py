@@ -163,8 +163,8 @@ class ContactInfo(object):
     def __str__(self):
         return '\n'.join([
             'Name: {}'.format(self.name),
-            'Email Address: {}'.format(self.email_address),
-            'Phone Number: {}'.format(self.phone_number)
+            'Phone: {}'.format(self.phone_number),
+            'Email: {}'.format(self.email_address)
         ])
 
     def get_name(self):
