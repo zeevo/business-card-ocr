@@ -151,8 +151,8 @@ class ContactInfo(object):
 
     Attributes:
         name (str): 
-        email (str):
-        phone (str):
+        email_address (str):
+        phone_number (str):
     """
 
     def __init__(self, name=None, email_address=None, phone_number=None):
