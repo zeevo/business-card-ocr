@@ -133,7 +133,7 @@ class BusinessCardParser(object):
 
         return contact_info (ContactInfo): the ContactInfo extracted
         """
-        pass
+        return any(word in self.stopwords for word in candidate_line.split(' '))
 
 
 class ContactInfo(object):
@@ -144,8 +144,8 @@ class ContactInfo(object):
 
     Args:
         name (str): a parsed name 
-        email (str): a parsed email
-        phone (str): a parsed phone number
+        email_address (str): a parsed email address
+        phone_number (str): a parsed phone number
 
     Attributes:
         name (str): 
@@ -159,7 +159,11 @@ class ContactInfo(object):
         self.phone_number = phone_number
 
     def __str__(self):
-        pass
+        return '\n'.join([
+            'Name: {}'.format(self.name),
+            'Email Address: {}'.format(self.email_address),
+            'Phone Number: {}'.format(self.phone_number)
+        ])
 
     def get_name(self):
         """Returns the full name of the individual (eg. John Smith, Susan Malick)
