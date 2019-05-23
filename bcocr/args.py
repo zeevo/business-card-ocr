@@ -22,3 +22,5 @@ if not args.file and args.filename:
 if args.verbose:
     logging.basicConfig(level=logging.DEBUG)
     logging.debug('Verbose logging enabled.')
+else:
+    logging.basicConfig(level=logging.INFO)
