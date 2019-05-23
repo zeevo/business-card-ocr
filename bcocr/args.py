@@ -9,7 +9,6 @@ group = parser.add_mutually_exclusive_group(required=True)
 
 group.add_argument('-i', '--input', help='Pass the input directly as text', type=str, dest='input')
 group.add_argument('-f', '--file', help='Pass the input as a file', type=str, dest='file')
-group.add_argument('--test', action='store_true', default=False, help='Run the test suite')
 group.add_argument('filename', nargs='?')  # So that usage can be python3 bcocr example.txt
 group.add_argument('--version', action='version', version='bcocr {version}'.format(version=__version__))
 
