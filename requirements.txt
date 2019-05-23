@@ -1,3 +1,6 @@
+# Application
+nltk
+
 # Dev
 pylint==2.3.1
 autopep8==1.4.4
